@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FAF7F2;
+    color: #000000;
+}
+
+.navbar {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    background: linear-gradient(180deg, orange, white, green);
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #333333;
+}
+
+/* Base styles for the list */
+.nav-links {
+    list-style: none;
+    display: flex; /* Default for Desktop */
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.nav-links li a:hover {
+    color: #005F73;
+}
+
+.menu-btn {
+    display: none;
+    font-size: 24px;
+    color: #333333;
+    cursor: pointer;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none; /* Force hidden by default on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 15px;
+        background: #cbc8c8;
+        width: 200px;
+        text-align: center;
+        padding: 20px;
+        border-radius: 5px;
+        gap: 10px;
+    }
+
+    /* Target the class added by your JavaScript */
+    .nav-links.active {
+        display: flex; 
+    }
+}
